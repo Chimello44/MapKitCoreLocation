@@ -10,11 +10,12 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController{
+@interface ViewController : UIViewController <CLLocationManagerDelegate>{
     
 }
 @property (weak, nonatomic) IBOutlet MKMapView *mainMap;
 @property(retain) CLLocationManager *locationManager;
+
 - (IBAction)atualizar:(id)sender;
 
 @end

@@ -27,6 +27,11 @@
                                         <exclude reference="6s1-fu-Wfe"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="6s1-fu-Wfe"/>
+                                    </mask>
+                                </variation>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqW-7f-OSD">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -44,6 +49,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hxI-MA-IU8" secondAttribute="bottom" constant="40" id="2Vq-Wy-8bA"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hxI-MA-IU8" secondAttribute="bottom" id="5GA-6u-23k"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hxI-MA-IU8" secondAttribute="trailing" constant="-16" id="7GN-6t-uq1"/>
                             <constraint firstItem="hxI-MA-IU8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9m6-IR-BP0"/>
@@ -53,10 +59,13 @@
                             <constraint firstItem="hxI-MA-IU8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QPp-rA-477"/>
                             <constraint firstItem="hxI-MA-IU8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="59" id="Qaf-ak-TFf"/>
                             <constraint firstItem="hxI-MA-IU8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UMN-lO-5mB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hxI-MA-IU8" secondAttribute="trailing" constant="100" id="adW-uU-AdK"/>
+                            <constraint firstItem="hxI-MA-IU8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="bko-84-vNv"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hxI-MA-IU8" secondAttribute="bottom" constant="20" id="cRB-vW-KfU"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hxI-MA-IU8" secondAttribute="bottom" id="kRg-Ny-bbw"/>
                             <constraint firstItem="hxI-MA-IU8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="n0E-HN-PJb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hxI-MA-IU8" secondAttribute="trailing" constant="10" id="sfV-8G-NNH"/>
+                            <constraint firstItem="hxI-MA-IU8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="vKM-K1-Isq"/>
                             <constraint firstItem="hxI-MA-IU8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="wU4-P9-7dP"/>
                         </constraints>
                         <variation key="default">
@@ -68,9 +77,13 @@
                                 <exclude reference="NlH-Gy-kl6"/>
                                 <exclude reference="QKj-Li-ttW"/>
                                 <exclude reference="QPp-rA-477"/>
+                                <exclude reference="adW-uU-AdK"/>
+                                <exclude reference="bko-84-vNv"/>
                                 <exclude reference="n0E-HN-PJb"/>
                                 <exclude reference="sfV-8G-NNH"/>
+                                <exclude reference="vKM-K1-Isq"/>
                                 <exclude reference="wU4-P9-7dP"/>
+                                <exclude reference="2Vq-Wy-8bA"/>
                                 <exclude reference="cRB-vW-KfU"/>
                             </mask>
                         </variation>
@@ -91,6 +104,20 @@
                                 <exclude reference="kRg-Ny-bbw"/>
                             </mask>
                         </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="9m6-IR-BP0"/>
+                                <exclude reference="9wC-OC-OXw"/>
+                                <exclude reference="Qaf-ak-TFf"/>
+                                <exclude reference="UMN-lO-5mB"/>
+                                <include reference="adW-uU-AdK"/>
+                                <include reference="bko-84-vNv"/>
+                                <include reference="vKM-K1-Isq"/>
+                                <include reference="2Vq-Wy-8bA"/>
+                                <exclude reference="5GA-6u-23k"/>
+                                <exclude reference="kRg-Ny-bbw"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="mainMap" destination="hxI-MA-IU8" id="Jwb-Vm-F9B"/>
@@ -98,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="478.5" y="266"/>
+            <point key="canvasLocation" x="478.5" y="247.5"/>
         </scene>
     </scenes>
 </document>

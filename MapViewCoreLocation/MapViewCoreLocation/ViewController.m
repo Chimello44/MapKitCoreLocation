@@ -14,11 +14,14 @@
 
 @implementation ViewController
 @synthesize locationManager;
-
+MKCoordinateRegion region;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor blackColor];
     // Do any additional setup after loading the view, typically from a nib.
     locationManager = [[CLLocationManager alloc]init];
+    
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     [locationManager setDelegate:self];
     
@@ -30,7 +33,13 @@
     
     [locationManager startUpdatingLocation];
     
+    _mainMap.showsUserLocation = YES;
     
+    
+}
+
+- (IBAction)atualizar:(id)sender{
+    [_mainMap setRegion:region animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,15 +51,13 @@
     
     CLLocationCoordinate2D loc=[[locations lastObject]coordinate];
     
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc,250,250);
+    region = MKCoordinateRegionMakeWithDistance(loc,150,150);
+    NSLog(@"%@", [locations lastObject]);
     
-    
-    _mainMap.showsUserLocation=Yes;
 }
 
 -(void) locationManager:(CLLocationManager *)manager didfailWithError:(NSError *)locations{
-    [_mainMap setRegion:region animated:YES];
-
+    
 }
 //#define METERS_PER_MILE 1609.344
 //
